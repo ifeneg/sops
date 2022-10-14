@@ -1,25 +1,3 @@
 redis:
-    password: ENC[AES256_GCM,data:1n61bRJSROI=,iv:hfI+3U9tqV2ZNLb6poBRitVuDlgVAeBiKIJLjVYnnGs=,tag:g5oxiXxAIklN0yWXnAhZ0w==,type:str]
+    password: "12345678"
 architecture: standalone
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age: []
-    lastmodified: "2022-10-14T06:58:20Z"
-    mac: ENC[AES256_GCM,data:uLZpzwDD0u8yYIHQosDSnMBD9rB6AlzYf0DRxe4pth0cJXZKIT60Yl/sXmdqNwz0Yjf0r6vZH94KQyRBgQC8Dn9TenkDvfnQ1jDuyAZECqskToLhdqHlwnwD0fiQjJbcgF/RFpW8eYd4G9pdklFpE3Acl9Rlnef5XY8HTeWjAMA=,iv:aWhOcXEevNgEs5qWK7KqoUC4vZhyXv4brKfVdyKJCRE=,tag:NophJdmG19ECha5VQI43cg==,type:str]
-    pgp:
-        - created_at: "2022-10-14T06:58:19Z"
-          enc: |
-            -----BEGIN PGP MESSAGE-----
-
-            hF4DJh3JCcUJM6ISAQdAgaBsWvTtCWigAeDc3FIhm08Y1+HV921+NDLFnJFxUg8w
-            S2pfgISh+TmmbXYJ/Uo42xkl+BqPBGSse2cDTa/GIGrCu+Hf5j58WLawkzDeGMlG
-            0lwBMwvr/vmfD577+la4YB8cYhsv8rHDznkUzaN/T2sPQ9tuvM9/2fSK+hvHKpJJ
-            g3C7s9vnW3e+oTNxL7aSTNN+krYgfihwgUrmNBio4eYdvCxeGAAlsHaIvSa6pQ==
-            =+mXs
-            -----END PGP MESSAGE-----
-          fp: 2E5022DCAAA8169C885811D7D595F45C65FC9699
-    encrypted_regex: (password|htpasswd|cert|key|apiUrl|caCert|secret|accessToken|redisPassword)$
-    version: 3.7.3
