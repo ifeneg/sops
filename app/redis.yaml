@@ -1,3 +1,2 @@
-redis:
-  password: "12345678"
+redis.password: "12345678"
 architecture: standalone
