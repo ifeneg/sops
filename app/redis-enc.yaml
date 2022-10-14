@@ -1,6 +1,6 @@
 global:
     redis:
-        password: ENC[AES256_GCM,data:m0H3X4p95qA=,iv:X8HLTnICQpUQB8IHmLDirMNzEBpr2fBJWZTbeQnMZw8=,tag:7O6ecJ4tgbstVtw2zbSCUQ==,type:str]
+        password: ENC[AES256_GCM,data:vmZLc3bq/7g=,iv:5McWQr7Iqh2CAuEFg+iuLxg0N31OV/M4een7p9H+0hA=,tag:6E/MblfyXtBjVAzZAMSrVQ==,type:str]
 architecture: standalone
 master:
     kind: Deployment
@@ -12,19 +12,28 @@ sops:
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2022-10-14T09:54:43Z"
-    mac: ENC[AES256_GCM,data:sSsa5MhatKik+OcVSSWHf5+yxAJSMlWwoM2LSJL/V5EhfakOO3OQuVApsuM8XyjTqDIVnYVZjTUrKqf7cpwLdFf3FobZssNpkhyC0PnG+CMpSv4CK4Vcp/+F1lSZ1EfhHhvFjFPVqcnaPc1tlvLL3IGOdCKXL5L8mAjmpZGtJwY=,iv:JAB6jx6no6K5ZGQPawTY/rMmrcE5RKDIZ+kuLLx0vD8=,tag:I7busf695Bf4AmadS060hw==,type:str]
+    lastmodified: "2022-10-14T11:26:20Z"
+    mac: ENC[AES256_GCM,data:5D83tYbblRIVBRsyTKggYle6JItSXJTnQMBeBvTyeuUleskN8Ip/UszYzwO59Re8KL7VnohFOxrM6sxCUkLgWru6BTD7XCagXLUC6iKAOdmEfTXxjBpb3wnRc29KuPLYrn9i+ncKPH6eWG3NAzeOLDkyCnM4dtA0BzS96cgEOoY=,iv:DNtNgX/n6b813LKgIelVzhV2XP9FVCcNzki2ZBgeXhE=,tag:5ugxTgOxAZdTQ/xR4spJFg==,type:str]
     pgp:
-        - created_at: "2022-10-14T09:54:42Z"
+        - created_at: "2022-10-14T11:26:19Z"
           enc: |
             -----BEGIN PGP MESSAGE-----
 
-            hF4DJh3JCcUJM6ISAQdASVmud8XlTgnDp421TB77eZB0kV0NftTrLrZh8ctMXxQw
-            oskJkcahm4fDcjnwVNzUB0NrC7y5zLkmxnvAbcuCWxH/BtvrCtp0JAWoN+fH7VwE
-            0l4Bmo57x9A2v4IDWCwtLKoC29wy1jwD2+DeCNs2spQ6ZdzvUN7qPCpiTx9kh++/
-            xMTO0v/OtxSRc3Yaf2SuOjtecGBBdNDdjHF14qBaMuoYoD2hSUZzFd+3Ix2tlT/I
-            =tu/K
+            hQIMAw/ulVIIwdPpAQ//aVADKReuxNm3HclwKzpDiSiHhjfeVw7ioVMoniSPcS+B
+            yh+aUvrZbVldKUvGLaoeKxBnSaRuMzIoFUHZ900TtSY43XL4Mqr9Gz5+EUq2Vhf8
+            NVfgYvmocZ7heTdkP/Sk2GqRbJrMUvK1fC1TRpDonMvtH9yGNxpRgI9k8kWksfjO
+            ePnRrOiofXU6vy0ROzGM66XuOilKHZJR/I2b2Ht5mXf8OsHyK3khn/N7sbuxldb9
+            8vul3zjaxF7XARN0WRbeK9bX4TfcESqmtquHufWX4iZypWJCjXKmYphRFhyweV9q
+            23POXRTfNOxtxiBmGs4618upQy8HmE9pjCUeG5Zs9qyX4rdy1O2hgpGccUYBH0/9
+            ndBuVbDm+QNISHv8LYh+g85HG8Sd88C8K6dYdVj1U7pI5F3TEzAgMwlidKRePZxt
+            E2ZpCQZLFaLeanzJ5t0mGXaQOz3EleAnndO77yWOjmHqaEfQ+oIz6F1Z8ny4rcS6
+            MHn1bXL5hce9G9nf8XNen7fVGdl4w3neKJUvP2oOuWFEaCQxxZbCnLjK9M08ovrM
+            8tw0xTLNkXh5tJEZXySYDAnant1lTKOKIzTE5RF23ou1Kh3lhej5ZFItHU4GcsGT
+            WeIyjGODHR3fkIxxHkVCXt7Lfn5iKa5oVD8fHVyftrr/eUZC5Qnj5wCDG1w8NuvS
+            XgE5aoQ8f3NZ6rlHPNpTTdSbXwKc/Z00wyrIgB/BNCbVQ5Cx7QDz8mB8/2Zr8ADl
+            MH5w0Kzl8Qj+8F78e51OdwJ1AujlGdCvBcKnBR1GQ4TyOI+m4sEC2BWWB3YOoY0=
+            =yaGn
             -----END PGP MESSAGE-----
-          fp: 2E5022DCAAA8169C885811D7D595F45C65FC9699
+          fp: 951C4036C935A27E945AF64082E0A28289DDEC36
     encrypted_regex: (password|htpasswd|cert|key|apiUrl|caCert|secret|accessToken|redisPassword)$
     version: 3.7.3
