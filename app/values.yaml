@@ -405,7 +405,7 @@ master:
   persistence:
     ## @param master.persistence.enabled Enable persistence on Redis&reg; master nodes using Persistent Volume Claims
     ##
-    enabled: false
+    enabled: true
     ## @param master.persistence.medium Provide a medium for `emptyDir` volumes.
     ##
     medium: ""
@@ -804,7 +804,7 @@ replica:
   persistence:
     ## @param replica.persistence.enabled Enable persistence on Redis&reg; replicas nodes using Persistent Volume Claims
     ##
-    enabled: false
+    enabled: true
     ## @param replica.persistence.medium Provide a medium for `emptyDir` volumes.
     ##
     medium: ""
