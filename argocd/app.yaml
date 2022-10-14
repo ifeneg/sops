@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app
+  name: app1
   namespace: argocd
 spec:
   project: default
@@ -29,4 +29,5 @@ spec:
         # secrets+gpg-import://<key-volume-mount>/<key-name>.asc?<relative/path/to/the/encrypted/secrets.yaml>
         # secrets+age-import://<key-volume-mount>/<key-name>.txt?<relative/path/to/the/encrypted/secrets.yaml>
         # Example Method 1: (Assumptions: key-volume-mount=/helm-secrets-private-keys, key-name=app, secret.yaml is in the root folder)
-        - secrets+gpg-import:///helm-secrets-private-keys/key.asc?secrets.yaml
+        ##- secrets+gpg-import://helm-secrets-private-keys/key.asc?secrets.yaml
+        - secrets+gpg-import-kubernetes://argocd/helm-secrets-private-keys#key.asc?secrets.yaml
