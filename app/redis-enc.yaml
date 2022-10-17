@@ -1,6 +1,6 @@
 global:
     redis:
-        password: ENC[AES256_GCM,data:11duP7+ZCbo=,iv:agGEfrYPumf9AbgCVl03BmOFGVRiaKu6QHylOGdJDa4=,tag:EuS6YTZJhHB6lvjYK30/Vg==,type:str]
+        password: ENC[AES256_GCM,data:suAzUFwBaw==,iv:oV3MytEqnqCgfNxAe8vYCrgByCKM0mlX9THaHCuQSW8=,tag:f+pakk5bOQHZB/8JfDgnMQ==,type:str]
 architecture: standalone
 master:
     kind: Deployment
@@ -11,18 +11,29 @@ sops:
     gcp_kms: []
     azure_kv: []
     hc_vault: []
-    age:
-        - recipient: age135ajr0y57ez5nqmatqr922cvehx8jxdcj8x46fm7he6m54ym5gzqmtrjn9
+    age: []
+    lastmodified: "2022-10-17T09:06:43Z"
+    mac: ENC[AES256_GCM,data:hIIXjpFAyWIDBlU0ORUdkQWxJL9UnIAxXhADFO5NhE1Kexq3LLyyhezBHkiQ6GIlVJAXXmbES2f5amcPRQF5bz1mtLTvXhSPWqU1hAviV/Gtp4xT+rxWGy8GAiaFcELzUVu/C46gKq8a5t5/c3eSO9hADmW/DlFiMHcJQLPEoHo=,iv:+W3j85yvcXkUYy5PDYLPHErIM2bHhltEOogzNZqXce0=,tag:NgPwoCpYrwHApTgdjYvLqA==,type:str]
+    pgp:
+        - created_at: "2022-10-17T09:06:43Z"
           enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBDTS9hOVlTNGl6RGJnOFBp
-            cmN4eDkveTNnbGk0RzZQangxZStJVmtTcURBCmJ6bEZITVdVbkI2Vm5DMkw5L2o1
-            WXpoTXZMQ3JPZGxzTUVJS3FNY0QyWXMKLS0tIGJrNUhJaG93TXpJWTJzMkJTUzhr
-            RGJXL0tnc2hnZDlkanc3K1c4eDNKaDQKduOqkXBnhAW72XP9PkVg85N6eMS/101p
-            DJNmUCR8wVgY91yjfe6T9sdaK9H72LioV7RI/nLItN34/BX3pI3APA==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-10-14T13:21:37Z"
-    mac: ENC[AES256_GCM,data:Y+G9JPNTA6tJVUNKEYyuNMzvAYtk6jvusyUIK/Z34q9K001tSikU3LzN6/Mc4hLbMQSl5fkC9mTL5pDGw01N53aNovo/3lj14lN9jxYkktUEIlnnWoIZKs/Ra2rY4Da5bb7zKDJPKcICq6Z09V78LvahdZvXBGePX2gmrtk080o=,iv:s3qnEzaJK9DNO9C40lnzaXsRWRGD1pdDshvRnYlbLNc=,tag:KN843LIES4DYLL9QByktPw==,type:str]
-    pgp: []
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAw/ulVIIwdPpAQ/9G9EahN1zwYMnyvG9tn5oxeMWRMIai4HxgQDxg2yy/MKZ
+            WnEpaD0rDJqXJTXuuZj2e7iLe0hv6FRH080QMTC+T0dT2QWRaDGIuJ3pfWCmbu3g
+            L0fBNfKvO5ki/LaSgjId4UJ1ivlEAlQpCdFoMymlVp3SUg+S9BVdatj4uQPCGzAy
+            BorvUbofu799cKS2N53PGr4Vkm5w2tSTY6hiM2+VCwX5e/5GC92v9dSM9hNiIGLr
+            GVlX3E3qIcvrcNwr9xu9UmhfpW+ZiRFiuANlD1zv9ZsaMfp2FPtlXv8wOM9oQY6g
+            c4KFb+Rz5aulFC90ver8B940d1WuLdnelTpluTUqSPvCFa9pWzq+JysmLLNP20la
+            mQ7bmOUuLtpLtRSYYXbA8M0sEuGqipuy0/L7RdQaRneyeoltuRdHL32Wmxrz1Ogp
+            04PkzhgHenznkMa7/jZTkRf8xj6UbmzMvYf8mSmDEQTFmZNhjvXL2lWR2hLzcN11
+            GxChGuROmihFThocAtZPO+WuXI5k0ysLM4Ytc45to6dMkvUhJu29chofY0CMX4FM
+            HIQshPf6FxXqPwpMST40MinUD2GI9zvZ5HeWezGGYv36h4mxb4YOlxnxWs9kaob0
+            H3I/hf39dARB3SnYyV89umiiqckw0RG1d3/Nb2xNm1VOCJZAA3SD6Y/S+XQ7ZxHS
+            XgH5RPlz4MHFTpziv1/lRR6T8FZ/aXc/DYYlMsgLHgQe9iD3k3nrH/ekYWZ5rdwu
+            UFo7NNVyCJADrl3Kl+LtzuRdup93yjVDFKcrlA96Mf8ig87jJSSOeZha719+Hw8=
+            =2Qkg
+            -----END PGP MESSAGE-----
+          fp: 951C4036C935A27E945AF64082E0A28289DDEC36
     encrypted_regex: (password|htpasswd|cert|key|apiUrl|caCert|secret|accessToken|redisPassword)$
     version: 3.7.3
