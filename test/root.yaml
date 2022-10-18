@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apps-helm
+  namespace: argocd
+spec:
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - Validate=false
+    retry:
+      limit: 2
+      backoff:
+        duration: 2s
+        factor: 2
+        maxDuration: 1m
+  destination:
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: test/apps
+    repoURL: https://github.com/ifeneg/sops
+    targetRevision: main
