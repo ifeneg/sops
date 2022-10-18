@@ -34,7 +34,15 @@ spec:
             #         - https://raw.githubusercontent.com/ifeneg/sops/main/app/redis.yaml
             #        - secrets+gpg-import-kubernetes://argocd/helm-secrets-private-keys#key.asc?https://raw.githubusercontent.com/ifeneg/sops/main/app/redis-enc.yaml
             #        - secrets+gpg-import:///helm-secrets-private-keys#key.asc?git+https://github.com/ifeneg/sops@app/redis-ha/secrets.yaml?ref=main"
-            values: ENC[AES256_GCM,data:tnC/AnqWbgo5TdCq3VXLHB8AG5ZO2sck6QBVGhsY7v+uldma656Q0Cqj7gR7prWInWKwF09R9l+AfqVNETxpb0e5hvWbK6XkQZlz9BvnV2ci+qfTawi4quOJxQRqQY0iaFi+Bm40d0cCf32nQIqFMo/e5nKo65QAIvW9jNs7,iv:L7UL96Al0QKAtuWTffeTHYVrGXcYX8T1NruDpCvwFmY=,tag:V86gjwutJiAdZQJOHILJmA==,type:str]
+            values: |
+                global:
+                    redis:
+                        password: ENC[AES256_GCM,data:gNb96DrnV98=,iv:YBKEiwNbIfMyZog9Yo4eExzat3EIhpmbIHyh/oLqIxE=,tag:5VlpK9gQSDn3ToAPNZvR+w==,type:int]
+                architecture: standalone
+                master:
+                    kind: Deployment
+                    persistence:
+                        enabled: false
     destination:
         server: https://kubernetes.default.svc
         namespace: redis
@@ -44,28 +52,28 @@ sops:
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2022-10-18T07:12:44Z"
-    mac: ENC[AES256_GCM,data:2pZEgV/w6A89LyCz7EFa6dX/xeU2bWWssbpTvlzzOoTGJi1Q3xDu8BKLGB9LXEzm2a5hYJCDKHsUTYzkg2X188wtISSuLYlNXCHdmOPajgrbHoaf27x31lfnHcyDG1lTCxMwtAILWhRZ2+upBCwoQp6LxMLzrTC1VUwNyT1ZGKs=,iv:F+98/KYzMKXVzKoV2ZengvOil6T6db3nNGCNCPC5Z3Y=,tag:B2YqSueqbIGOdOqZuMBMHA==,type:str]
+    lastmodified: "2022-10-18T07:21:03Z"
+    mac: ENC[AES256_GCM,data:IUx3sREEWUavXiMZnMEXhMpbgwjj2Qy45u64l24bhFNXTKbkvWCQUw5yp2xq26Q5Ey6xa2UWdaPcZ5tQ1d8LPXETMCEyj0bpkR74i2wAaOpsbGNsB8fvCZvOKapYYV3qDGc4Oat8vLo8tTW9QEv/frcOevyw1g5TJ3HuywXeyQ0=,iv:VnyWMkR45M3DeeVwhGfMGq1A1lO8cNnxf/4tMr7XJDw=,tag:ctUMVu2Z6pjhW0OstM5JkQ==,type:str]
     pgp:
-        - created_at: "2022-10-18T07:12:44Z"
+        - created_at: "2022-10-18T07:21:03Z"
           enc: |
             -----BEGIN PGP MESSAGE-----
 
-            hQIMAw/ulVIIwdPpARAAjljtJhl0aE6gaZMjLsecKjJ1fOBLnuX6/zzkKgQYHN4F
-            HCACbFKUtEs84AdHhYmxC7IC36wPbdPqstZBlDmUEdQhy40PAnvL7LZgX4Hrvomx
-            Z7nbVN5XT0qZRMKvkyoxu7lne1QKtO7pLXWuyyLUiMDmgS2uW/GqmxWlKNrCW7Xn
-            JiPacgMpETFSkU9tlqAdwX/KJpm/olhgovHWg9OYxjQisR3vXnIIu9zpVIGLV6df
-            SMTn0d2KrbaE2lZVZql4uOzWxVFI+I2irvacbHFevjWxed8UzCgpOnRj54zX/zIC
-            yfZXbVVVGCucsA4e4n53OGeKTkYofd08BBSTp1ervEGiPHToxAszM7myg2iS6IgB
-            p9USJNQ45bvbNgSH5SJLHxCgbpYharWTWS0lfG9QP03o5P7a1ZuewNq/co8F9wYx
-            bD0XY+QfF/KumQqLyhOm5MfCJOynUnJpHZbKHAvEs1BEGfV+T4YEZS45rT+6TPs7
-            2bxtDt4mzUHUa9Eq/TpUYfhMd5/ZEvqWx5F5nWNWhwi4kg06okGawoyHAkhnELuV
-            m1CXQQczGL9lEUUhXodguQaHJLvvn4/byGDnPjNCjDpYz4BDynse0hmg3cgtZTjF
-            p8bTfBA+1SCkTmqq6LMmadtjJdmTd1lL1kwVxa6GVJ0A03xK9itlTUiiZC3guQTS
-            XgGVEZnrTTqkdU1hx4HaibJQJnsuDLUQXtP1ny7FCiCuKrQKNHYHQZXvk5oov2dp
-            b01y3ieBDtQa8qNkIrnHcL33ZkaTsq4Ce8+iKMLBMSrlXRIN40GQJykQwX1VIG0=
-            =iH1x
+            hQIMAw/ulVIIwdPpAQ//dMQ8yhbWrtgx9STbNIva5mdhFigUiijuJre6SHRmiqbk
+            98kFHjRlcBpRu52oKo6/cqmAO/DPBH+Gu2qR+9RCdZHC3DFN1Pc+MmE/NyYUlVg1
+            wkcJxbisc1fWh1dp4rVD/DBJPAvmldvuKl0tjbJgHuhUIBwPp1dZXvmJzNQd8+OU
+            jiL/DODf08C3szVZuj/PQcldfCVGZPKIYZTOPt+lEkiCNJ3Kh4GAvdlB0UwsmhPn
+            QmwS1LD1eDBklkmRBzuOPxoxKRs1WDh4TxKnc5RBnaAb0IQqPu1vZ2dvMswayDCD
+            H9pykD1zPQdU3wBQAkeQN+3BIBz4r4uLo8bqo8jQm1/TihmfOuFMAgHuSLaXGwNn
+            5gfA4XvGSgUV3QSmeTMXjMjQnH273kNyAzYqtPWfnpZHHPXYdsQPG85o06838vlF
+            1z2+YPa8nbKvgwjgAi7RRUwWZcWsCP5THO5Ec2YUfz6zu1Wy4FoLzr55O1Kd8p/h
+            2KzzF/tKOgJOx16DSArHdcwhVgnmXgFq7YfvnOSF/7zuwFJ2qh9nzegn10kymPQi
+            0sbB62wCpTun8hN2Sm/mA0V0KC+hWH3nv+Si0WXcMGkbuCmJSnFnoYnUxluOsh7a
+            qvXDCkTN8I1DG+A3pFzEGbch/x4pxsS2H99FW//GfNhmJbwJb0Oa+4Q+B2wY64fS
+            XgHzx5zsvFJjJht6VvjxTC+tXtggmMyvi5GgfmxCeeai2YAn/xrEvswXWOVMavds
+            yzGJ2f3MMKqK4MNOJnNdvLXnT/v76XeUQ6isTy8fvZDczzRm2pLADA3lrCpYtgY=
+            =SV/H
             -----END PGP MESSAGE-----
           fp: 951C4036C935A27E945AF64082E0A28289DDEC36
-    encrypted_regex: (password|htpasswd|cert|key|apiUrl|caCert|secret|accessToken|values)$
+    encrypted_regex: ^(password|htpasswd|cert|key|apiUrl|caCert|secret|accessToken)$
     version: 3.7.3
