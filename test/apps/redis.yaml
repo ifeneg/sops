@@ -46,34 +46,3 @@ spec:
     destination:
         server: https://kubernetes.default.svc
         namespace: redis
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age: []
-    lastmodified: "2022-10-18T06:43:50Z"
-    mac: ENC[AES256_GCM,data:94NCbmV4NqrZ+uqDl22PV0Mfb2YIR7xrku+zXU6WjkeGG2+TGmhr8P5DBZvpc7pze4pRMiTTOabhMRzuLk5uvXn4mjAWd1pQmwJRmjsbQHdcuE08/qkM7MaVC7tfefPuxyjMPxoYYK6/NsgK2gJSe8E+9833Ygma2p/atukE898=,iv:AyCbLBIYB9qBr90aEKA4vqhpbsaMm9YwSYzEIQtACRA=,tag:J67lrOqXqkQqHtG0Xa0nqQ==,type:str]
-    pgp:
-        - created_at: "2022-10-18T06:19:33Z"
-          enc: |
-            -----BEGIN PGP MESSAGE-----
-
-            hQIMAw/ulVIIwdPpARAApgnIyPz30vUh/p6QOxOYSQc57KbT2orONnOV2u1jyx9H
-            P7rcOYuDQuZq+6kgr/20ULvhBxWQsDiPaZs4ZJhytaxy8eWEwaBqwLYI7W5JPtts
-            PQ4FO4Sg0fky1ZdSp6eAV7QdeASQHlCRAxdEUkt1I7Hsz/Z10Xwm30jTv6OfDtiE
-            PY3dmJKggvwwGvLT8asWI3vvaehd+1LRAjDBzx1NtD3edQR1iqdTKcTqt1Afpilc
-            XT/dRXPB1CHt8wB1Jch55kjY9oklCN5Eq91cxNkUjyad3FbDNTIqXelR45K4BUvG
-            WOMexv3+W2+FZgdkXYADe8UsTBe8GDcnWcWyk/3gBE5Bi30I57mtCS9Un35WktVw
-            CS9qA0kuCM99vUlsyJTrd3aSdcWCLAtGy2dGm7adM5lR0sUwI/GsxcLDw7tM/uMQ
-            eQ330zJ+iRsNT6keAMqFAWC+H0Y9DN831NukmLsEqJuYv5ahI27jl12keedsW2ol
-            qGpgEZju36NkfpOW9TNIX6HWcshzpiDKKFga71m7tGPY6s30K5gjXOPZ5CZAzaOR
-            dV1/qEY6yGIznLaIihAfF2RKfwP5CURT0CwzmTj/LYwzuknzEuagH1TKzpPPB1fn
-            V3fCVNCUGIDYJEPE+8yIvrMPO6G+yghASNs8wHMJxK5wyyX7vvmbs49jqFqD4UvS
-            XgEhJfz9+0CybWu5Q2UGphNLKhMt4bB1h7rBvgD1+Vuqhn45PSnpb2c/ZCToVgfR
-            9ZMScTda+laNp6lXF7fzwVnokQs8myF2MvcgLFbNUEZyAVvtf3eiH8a3RCBrJXA=
-            =3KT2
-            -----END PGP MESSAGE-----
-          fp: 951C4036C935A27E945AF64082E0A28289DDEC36
-    encrypted_regex: (password|htpasswd|cert|key|apiUrl|caCert|secret|accessToken|redisPassword)$
-    version: 3.7.3
