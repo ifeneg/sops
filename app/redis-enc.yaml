@@ -1,6 +1,6 @@
 global:
     redis:
-        password: ENC[AES256_GCM,data:79TdljYR,iv:QUUCIzmys/YSnVMNA1B2vKOweLuFYkaG4QEFewBLQWs=,tag:Bb1OL8aN63sSHDpEpsMcAQ==,type:int]
+        password: ENC[AES256_GCM,data:hzK/arbiuA==,iv:f/ktnHW39ZbOfACic4qkA0/wtr4ovS2PGda2dRo/pvs=,tag:fQVdmlWG5JJKOQpxsNq2Uw==,type:str]
 architecture: standalone
 master:
     kind: Deployment
@@ -12,8 +12,8 @@ sops:
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2022-10-18T08:21:42Z"
-    mac: ENC[AES256_GCM,data:YkbRCkXFbgO5zRSI/TmLUQOprnZog9t3uOkUMITl6GYXKGQlszDEXRH46OProMuuw5o4901WWyI0WnT9+ExaLscOP2VAgsK2nEF3uJEYXU71KF7ngFr0aWTQQmYgurvGiK7INOF5oNjO/1Vjqg7sklSGAlIDi/EIt+XT9a+uEX4=,iv:YY3ahN2t7AJoDBrI9z5sP7x7zvRePdBy1WG8P2OdSxc=,tag:KwDpjugaCkkuoEbcJU28xw==,type:str]
+    lastmodified: "2022-10-18T08:30:51Z"
+    mac: ENC[AES256_GCM,data:n5hqLXiu/sqemJww7TM39Odcrw6arr4F6j7P95xWGRCAvTCAHw4fAVSklqJhmvW6RlGgpQ2wpaT9oCfuOpNifi0Qcez+IDqRCWctUZyeJRzPLPzkPGYuFxDWdaOPegtbHHly0BzbsdvRvtqhPXqJE5+7GmYRo4FR/B9zeJTeWR4=,iv:yDjgD7WvdXFpZGYZNI3yjvLWw82TCidxj/iAvON26MA=,tag:nE7FAWY+ursZ6crGdqvy+Q==,type:str]
     pgp:
         - created_at: "2022-10-17T09:06:43Z"
           enc: |
